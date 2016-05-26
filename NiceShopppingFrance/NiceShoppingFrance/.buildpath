@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="V1.0/NiceShoppingFrance/HTML"/>
+	<buildpathentry kind="src" path="V1.0/NiceShoppingFrance/niceshopping"/>
+	<buildpathentry kind="src" path="V2.0/NiceShoppingFrance/HTML"/>
+	<buildpathentry kind="src" path="V2.0/NiceShoppingFrance/niceshopping"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+</buildpath>
