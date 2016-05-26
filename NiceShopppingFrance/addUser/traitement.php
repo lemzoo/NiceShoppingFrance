@@ -52,6 +52,7 @@
 	$arrayUser[4] = $numeroTelepehoneUser;
 	$arrayUser[5] = $roleUser;
 	echo 'roleUser = '.$arrayUser[5].'</br>';
+	
 	$idPerson = insertUserData($bdd, $arrayUser);
 	echo 'idPerson = '.$idPerson.'</br>';
 	

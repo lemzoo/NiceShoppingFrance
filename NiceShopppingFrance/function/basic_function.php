@@ -101,10 +101,26 @@
 	 * array[5] = roleUser
 	 */
 	function insertUserData($database, $arrayUser){
-		$returnVal = false;
+		echo('Appel de la fonction : insertUserData()');
+		$returnVal = 0;
 		
 		//Verifions si les données ne sont pas vide
 		$isArrayEmpty = isArrayContenEmpty($arrayUser);
+		
+		$civiliteUser 			= $arrayUser[0];
+		$nomUser 				= $arrayUser[1];
+		$prenomUser 			= $arrayUser[2];
+		$dateNaissanceUser 		= $arrayUser[3];
+		$dateNaissanceUser 		= $arrayUser[4];
+		$roleUser 			  	= getTheUserRole($database, $arrayUser[5]);
+			
+		echo('$civiliteUser = '.$civiliteUser);
+		echo('$$nomUser = '.$nomUser);
+		echo('$$prenomUser = '.$prenomUser);
+		echo('$$dateNaissanceUser = '.$dateNaissanceUser);
+		echo('$$dateNaissanceUser = '.$dateNaissanceUser);
+		echo('$$roleUser = '.$roleUser);
+		
 		
 		if ($isArrayEmpty){
 			$returnVal = 0;
@@ -115,8 +131,15 @@
 			$nomUser 				= $arrayUser[1];
 			$prenomUser 			= $arrayUser[2];
 			$dateNaissanceUser 		= $arrayUser[3];
-			$numeroTelepehoneUser 	= $arrayUser[4];
+			$dateNaissanceUser 		= $arrayUser[4];
 			$roleUser 			  	= getTheUserRole($database, $arrayUser[5]);
+			
+			echo('$civiliteUser = '.$civiliteUser);
+			echo('$$nomUser = '.$nomUser);
+			echo('$$prenomUser = '.$prenomUser);
+			echo('$$dateNaissanceUser = '.$dateNaissanceUser);
+			echo('$$dateNaissanceUser = '.$dateNaissanceUser);
+			echo('$$roleUser = '.$roleUser);
 			
 			//Insert now the data in the table
 			$req = $database->prepare('INSERT INTO user(civiliteUser, nomUser, prenomUser, dateNaissanceUser, numeroTelephoneUser, roleUser) VALUES(:civiliteUser_, :nomUser_, :prenomUser_, :dateNaissanceUser_, :numeroTelephoneUser_, :roleUser_)');
